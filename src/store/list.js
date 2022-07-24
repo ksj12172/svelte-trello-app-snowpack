@@ -100,7 +100,7 @@ export const cards = {
       const fromList = _find($lists, {id: fromListId});
       const toList = fromListId === toListId ? fromList : _find($lists, {id: toListId});
 
-      const clone = _cloneDeep(foundList.cards[oldIndex]);
+      const clone = _cloneDeep(fromList.cards[oldIndex]);
       fromList.cards.splice(oldIndex, 1);
       toList.cards.splice(newIndex, 0, clone);
 
